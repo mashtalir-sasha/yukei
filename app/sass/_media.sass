@@ -1,0 +1,309 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+
+//Extra large: ≥1440px
++media-breakpoint-down(xl)
+
+//Large: ≥1200px  max-width: 1439px
++media-breakpoint-down(lg)
+
+//Medium: ≥992px max-width: 1199px
++media-breakpoint-down(md)
+	.nav
+		&-logo
+			a
+				left: 50%
+				margin-left: -95px
+		&-btn
+			width: 32px
+			height: auto
+		&-list
+			float: none
+			margin-left: 10px
+			&__item
+				float: none
+				margin-right: 0
+				margin-bottom: 10px
+				&:last-child
+					margin-bottom: 0
+		&-mob
+			height: 100%
+			max-height: 0
+			overflow: hidden
+			transition: all ease .3s
+			&.show
+				max-height: 500px
+				transition: all ease .3s
+	.head
+		&-title
+			margin-left: 0
+			&__txt
+				font-size: 36px
+		&-list
+			margin-left: 0
+		&-btn
+			margin-left: 0
+	.clip
+		&-slider
+			&__slide
+				iframe
+					width: 640px
+	.portfolio
+		&-slider
+			&__img
+				height: 150px
+
+//Small: ≥768px max-width: 991px
++media-breakpoint-down(sm)
+	.nav
+		width: 100%
+	.content
+		width: 100%
+		float: none
+	.for
+		&-item
+			&_i3
+				margin-top: 0	
+	.clients
+		&-map
+			&:before
+				display: none
+	.clip
+		&:after
+			display: none
+		&__name
+			transform: rotate(0)
+			margin-left: 0
+			width: 100%
+			height: auto
+			text-align: center
+			margin-bottom: 40px
+	.order
+		&-img
+			margin: 0 auto
+	.lang
+		position: static
+		margin-left: 0
+		margin: 10px 0
+	.modal
+		&-form
+			max-width: 500px
+			margin-left: 200px
+	.catalog
+		&:after
+			display: none
+		&-item
+			opacity: 1
+			&__img
+				margin: 0 auto
+			&__name
+				min-height: 57px
+			&.line1, &.line2
+				&:before
+					display: none
+		&-info
+			opacity: 1
+		&-slider
+			.slick-arrow
+				cursor: pointer
+				position: absolute
+				top: 50%
+				margin-top: -30px
+				font-size: 0
+				width: 60px
+				height: 60px
+				background-color: #fff
+				border-radius: 50%
+				z-index: 2
+				box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25)
+				transition: all ease .3s
+				&.slick-prev
+					left: 10px
+					&:before
+						content: ''
+						width: 15px
+						height: 26px
+						background-image: url(../img/arr_left.svg)
+						position: absolute
+						top: 17px
+						left: 22.5px
+				&.slick-next
+					right: 10px
+					&:before
+						content: ''
+						width: 15px
+						height: 26px
+						background-image: url(../img/arr_right.svg)
+						position: absolute
+						top: 17px
+						left: 22.5px
+				&:hover
+					transition: all ease .3s
+					background-color: #EF223F
+	.portfolio
+		&-slider
+			&__img
+				height: 100px
+
+//Extra small: ≥576px max-width: 767px
++media-breakpoint-down(xs)
+	.nav
+		&-phone
+			float: none
+			margin-left: 10px
+			background: none
+			padding: 0
+			color: #000
+			&:hover
+				background: none
+				color: #000
+	.content
+		margin-top: 54px
+	.head
+		background-size: cover
+		&-title
+			&__ico
+				&:before
+					display: none
+		&-img
+			max-width: 290px
+			margin: 0 auto 40px
+		&-btn
+			margin: 0 auto
+	.catalog
+		margin-bottom: 50px
+		&:after
+			display: none
+		&-ttl
+			text-align: center
+	.for
+		&:before
+			display: none
+		&-ttl
+			text-align: center
+		&-item
+			&_i2
+				margin-top: 0
+	.calc
+		&-final
+			padding: 20px
+			&__wrap
+				display: block
+			.rline
+				display: table
+				margin: 0 auto 20px
+			&__btn
+				margin: 0 auto
+			&__input
+				margin-right: 0
+	.service
+		&:after
+			display: none
+		&-ttl
+			text-align: center
+			&:before
+				left: 50%
+				margin-left: -74px
+		&-txt
+			text-align: center
+		&-item
+			padding: 20px
+	.about
+		&:before
+			display: none
+		&-ttl
+			text-align: center
+	.reviews
+		&-ttl
+			text-align: center
+	.clip
+		&__name
+			font-size: 30px
+		&-slider
+			&__slide
+				iframe
+					width: 320px
+					height: 240px
+	.order
+		&-ttl
+			text-align: center
+		&-item
+			&__img
+				justify-content: center
+				&:before
+					left: 50%
+					margin-left: -20px
+			&__txt
+				text-align: center
+	.contacts
+		&-map
+			&:before
+				display: none
+		&-ttl
+			text-align: center
+			padding-top: 40px
+		&-addr
+			display: table
+			margin: 0 auto 20px
+		&-phone
+			display: table
+			margin: 0 auto 20px
+		&-email
+			display: table
+			margin: 0 auto 20px
+		&-soc
+			display: table
+			padding: 0
+			margin: 0 auto 20px
+		.dev
+			display: table
+			margin: 0 auto 50px
+	.modal
+		position: relative
+		&:before
+			content: ''
+			width: 100%
+			height: 100%
+			background-color: rgba(0,0,0,.45)
+			position: absolute
+			top: 0
+			left: 0
+		&-form
+			max-width: 500px
+			margin-left: 0
+			.rline
+				display: table
+				width: auto
+				float: none
+				margin: 0 auto 20px
+			&__btn
+				margin-top: 0
+	.portfolio
+		&-slider
+			&__img
+				height: auto
+
+
+//Extra small: >0 max-width: 575px
++media-breakpoint-down(xxs)
+
+
+/*==========  Mobile First  ==========*/
+
+//Extra small: <576px
++media-breakpoint-up(xs)
+
+//Small: ≤576px
++media-breakpoint-up(sm)
+
+//Medium: ≤768px
++media-breakpoint-up(md)
+
+//Large: ≤992px
++media-breakpoint-up(lg)
+
+//Extra large: ≤1200px
++media-breakpoint-up(xl)
