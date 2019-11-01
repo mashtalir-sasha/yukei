@@ -202,7 +202,12 @@ $(function() {
 
 	$(window).on('load', function() {
 		$('.head-title, .head-list, .head-btn, .head-img').addClass('animated');
-		
 	});
+
+	$('.catalog-item__btn').click(function () {
+		var parent = $(this).parent();
+		var name = parent.find('.catalog-item__name').html();
+		$('.subttl').val(name);
+	})
 
 });
