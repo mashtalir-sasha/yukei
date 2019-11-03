@@ -6,6 +6,11 @@ $(function() {
 		$('html, body').stop().animate({
 			scrollTop: $(anchor.attr('href')).offset().top-60 // отступ от меню
 		}, 500);
+		setTimeout(function(){
+			$('html, body').stop().animate({
+				scrollTop: $(anchor.attr('href')).offset().top-60 // отступ от меню
+			}, 500);
+		}, 1000);
 	e.preventDefault();
 	});
 
