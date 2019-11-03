@@ -196,14 +196,14 @@ $(function() {
 				}
 			}
 		});
-
-		setTimeout(function(){
-			$('iframe').each(function () {
-				var link = $(this).data('src');
-				$(this).attr('src', link); 
-			});
-		}, 5000);
 	});
+
+	setTimeout(function(){
+		$('iframe').each(function () {
+			var link = $(this).data('src');
+			$(this).attr('src', link); 
+		});
+	}, 5000);
 
 	$(window).on('load', function() {
 		$('.head-title, .head-list, .head-btn, .head-img').addClass('animated');
